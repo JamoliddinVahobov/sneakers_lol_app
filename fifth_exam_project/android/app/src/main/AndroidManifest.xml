@@ -1,4 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+ <!-- Permission for internet access to load network images -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <application
         android:label="fifth_exam_project"
         android:name="${applicationName}"
