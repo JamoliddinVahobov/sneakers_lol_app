@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:fifth_exam_project/bottomnavigationbar.dart';
 import 'package:fifth_exam_project/details.dart';
 import 'package:flutter/material.dart';
@@ -213,7 +211,7 @@ class HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
         toolbarHeight: 180,
         flexibleSpace: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -225,14 +223,14 @@ class HomeScreenState extends State<HomeScreen> {
                 children: [
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_back_ios,
                       size: 25,
                     ),
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.menu,
                       size: 30,
                     ),
@@ -240,8 +238,8 @@ class HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 25, bottom: 20),
+            const Padding(
+              padding: EdgeInsets.only(left: 25, bottom: 20),
               child: Text(
                 'Nike shoe store',
                 style: TextStyle(fontSize: 25),
@@ -297,8 +295,8 @@ class HomeScreenState extends State<HomeScreen> {
         child: GridView.custom(
           gridDelegate: SliverWovenGridDelegate.count(
             pattern: [
-              WovenGridTile(1),
-              WovenGridTile(
+              const WovenGridTile(1),
+              const WovenGridTile(
                 10 / 9,
                 crossAxisRatio: 1,
                 alignment: AlignmentDirectional.centerEnd,
@@ -315,7 +313,7 @@ class HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: CustomBottomBar(),
+      bottomNavigationBar: const CustomBottomBar(),
     );
   }
 }
@@ -356,21 +354,21 @@ Widget buildSneakerCard(BuildContext context, Map<String, dynamic> sneaker) {
                     children: [
                       Text(
                         sneaker['name'],
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       Text(
                         sneaker['description'],
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 13,
                         ),
                       ),
                     ],
                   ),
                 ),
-                Icon(
+                const Icon(
                   Icons.check_circle,
                   color: Colors.white,
                   size: 24,
@@ -392,7 +390,7 @@ Widget buildSneakerCard(BuildContext context, Map<String, dynamic> sneaker) {
               alignment: Alignment.bottomRight,
               child: Text(
                 '\$${sneaker['price'].toStringAsFixed(2)}',
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                 ),
